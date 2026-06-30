@@ -50,7 +50,6 @@ hackathon_ynov/
 │   ├── team_logs_archive.md           # Preuves du backdoor
 │   └── training.log                   # Log d'entrainement (COMPROMISED)
 ├── medical_project/
-│   ├── Readme.md                      # Guide fine-tuning medical
 │   └── medical_finetune_colab.ipynb   # Notebook Colab QLoRA
 ├── models/phi3_financial/             # Adapters LoRA herites (NON deployes)
 ├── ollama_server/
