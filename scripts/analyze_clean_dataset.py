@@ -36,7 +36,7 @@ def save_json(data, path: str):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"  Saved → {path}")
+    print(f"  Saved -> {path}")
 
 
 def extract_text(item: dict) -> str:
@@ -124,7 +124,7 @@ def analyze_dataset(data: list, label: str) -> dict:
     print(f"  Suspicious entries : {len(suspicious_entries)}")
 
     if suspicious_entries:
-        print(f"\n  ⚠  SUSPICIOUS CONTENT FOUND:")
+        print(f"\n  /!\\ SUSPICIOUS CONTENT FOUND:")
         for s in suspicious_entries:
             print(f"     [idx {s['index']}] patterns={s['patterns']}")
             print(f"     preview: {s['preview']!r}")
@@ -277,7 +277,7 @@ def write_quality_report(reports: list[dict], output_path: str):
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
-    print(f"\n  Quality report → {output_path}")
+    print(f"\n  Quality report -> {output_path}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
