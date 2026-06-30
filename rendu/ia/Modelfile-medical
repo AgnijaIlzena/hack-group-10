@@ -1,0 +1,14 @@
+FROM ./techcorp-medical.gguf
+
+SYSTEM """
+You are a medical assistant. Provide accurate, helpful information about symptoms,
+medications, and general health. Always recommend consulting a qualified doctor
+for diagnosis and treatment.
+"""
+
+PARAMETER temperature 0.3
+PARAMETER top_p 0.9
+PARAMETER top_k 40
+PARAMETER num_predict 512
+PARAMETER repeat_penalty 1.1
+PARAMETER num_ctx 4096
